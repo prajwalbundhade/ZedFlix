@@ -11,6 +11,7 @@ import ContentWrapper from "../contentWrapper/ContentWrapper";
 import Img from "../lazyLoadImage/Img";
 import PosterFallback from "../../assets/no-poster.png";
 import CircleRating from "../circleRating/CircleRating";
+import Genres from "../genres/Genres";
 
 import "./style.scss";
 
@@ -69,7 +70,8 @@ const Carousel = ({ data, loading, endpoint, title }) => {
                                     className="carouselItem"
                                     onClick={() =>
                                         navigate(
-                                            `/${item.media_type || endpoint}/${item.id
+                                            `/${item.media_type || endpoint}/${
+                                                item.id
                                             }`
                                         )
                                     }
@@ -81,14 +83,17 @@ const Carousel = ({ data, loading, endpoint, title }) => {
                                                 1
                                             )}
                                         />
+                                        <Genres
+                                            data={item.genre_ids.slice(0, 2)}
+                                        />
                                     </div>
                                     <div className="textBlock">
                                         <span className="title">
                                             {item.title || item.name}
                                         </span>
-                                        <span className="date"> Release: 
+                                        <span className="date">
                                             {dayjs(item.release_date || item.first_air_date).format(
-                                                " MMM D, YYYY"
+                                                "MMM D, YYYY"
                                             )}
                                         </span>
                                     </div>
