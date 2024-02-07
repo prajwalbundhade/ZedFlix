@@ -10,7 +10,7 @@ import dayjs from "dayjs";
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 import Img from "../lazyLoadImage/Img";
 import PosterFallback from "../../assets/no-poster.png";
-
+import CircleRating from "../circleRating/CircleRating";
 
 import "./style.scss";
 
@@ -76,15 +76,19 @@ const Carousel = ({ data, loading, endpoint, title }) => {
                                 >
                                     <div className="posterBlock">
                                         <Img src={posterUrl} />
-                                        
+                                        <CircleRating
+                                            rating={item.vote_average.toFixed(
+                                                1
+                                            )}
+                                        />
                                     </div>
                                     <div className="textBlock">
                                         <span className="title">
                                             {item.title || item.name}
                                         </span>
-                                        <span className="date">
+                                        <span className="date"> Release: 
                                             {dayjs(item.release_date || item.first_air_date).format(
-                                                "MMM D, YYYY"
+                                                " MMM D, YYYY"
                                             )}
                                         </span>
                                     </div>

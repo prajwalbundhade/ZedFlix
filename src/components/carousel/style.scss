@@ -157,12 +157,17 @@
                     line-height: 24px;
                     @include ellipsis(1);
                     @include md {
-                        font-size: 20px;
+                        font-size: 18px;
                     }
+                    
                 }
                 .date {
                     font-size: 14px;
                     opacity: 0.5;
+                }
+                .title:hover {
+                    color: #047c52;
+
                 }
             }
         }
