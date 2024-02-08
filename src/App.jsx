@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { fetchDataFromApi } from './utils/api';
 
+import { SpeedInsights } from '@vercel/speed-insights/react'; //for pagespeed from vercel
+
 import { useSelector, useDispatch } from 'react-redux';
 import { getApiconfiguration, getGenres } from './store/homeSlice';
 
@@ -58,18 +60,22 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <><BrowserRouter>
       <Header />
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:mediaType/:id" element={<Details />} />
         <Route path="/search/:query" element={<SearchResult />} />
         <Route path="/explore/:mediaType" element={<Explore />} />
-        
+
       </Routes>
       <Footer />
     </BrowserRouter>
-
+    <div>
+        {/* ... */}
+        <SpeedInsights />
+      </div></>
   );
 }
 
