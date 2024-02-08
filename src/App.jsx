@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { fetchDataFromApi } from './utils/api';
 
 import { SpeedInsights } from '@vercel/speed-insights/react'; //for pagespeed from vercel
-
+import { Analytics } from '@vercel/analytics/react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getApiconfiguration, getGenres } from './store/homeSlice';
 
@@ -74,6 +74,7 @@ function App() {
     </BrowserRouter>
     <div>
         {/* ... */}
+        <Analytics />
         <SpeedInsights />
       </div></>
   );
