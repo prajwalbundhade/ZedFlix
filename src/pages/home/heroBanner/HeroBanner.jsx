@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./style.scss";
-
 import useFetch from "../../../hooks/useFetch";
 
 import Img from "../../../components/lazyLoadImage/Img";
@@ -28,11 +27,17 @@ const HeroBanner = () => {
         }
     };
 
+    const defaultBackground = "https://image.tmdb.org/t/p/original/8te0oIAuUOxi03RbM1SfL3xUYHB.jpg";
+
     return (
         <div className="heroBanner">
-            {!loading && (
+            {!loading && background ? (
                 <div className="backdrop-img">
                     <Img src={background} />
+                </div>
+            ) : (
+                <div className="backdrop-img">
+                    <img src={defaultBackground} alt="Default Background" />
                 </div>
             )}
 
