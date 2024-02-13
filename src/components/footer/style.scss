@@ -20,7 +20,8 @@
             margin-bottom: 30px;
             gap: 30px;
         }
-        .menuItem {
+        .menuItem a{
+            color: white;
             transition: all ease 0.3s;
             cursor: pointer;
             font-size: 12px;
@@ -28,7 +29,7 @@
                 font-size: 16px;
             }
             &:hover {
-                color: var(--pink);
+                color:  #07f29c;
             }
         }
     }
@@ -48,9 +49,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        color: white;
         gap: 10px;
         .icon {
             width: 50px;
+            color: white;   
             height: 50px;
             border-radius: 50%;
             background-color: var(--black);
@@ -60,8 +63,8 @@
             cursor: pointer;
             transition: all ease 0.3s;
             &:hover {
-                box-shadow: 0 0 0.625em var(--pink);
-                color: var(--pink);
+                box-shadow: 0 0 0.625em  #07f29c;
+                color: #07f29c;
             }
         }
     }
