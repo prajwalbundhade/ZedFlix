@@ -10,6 +10,7 @@ import { fetchDataFromApi } from "../../utils/api";
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
 import MovieCard from "../../components/movieCard/MovieCard";
 import Spinner from "../../components/spinner/Spinner";
+import BackToTopButton from "../../components/backToTop/BackToTopButton";
 
 let filters = {};
 
@@ -161,6 +162,7 @@ const Explore = () => {
                     </>
                 )}
             </ContentWrapper>
+            <BackToTopButton/>
         </div>
     );
 };

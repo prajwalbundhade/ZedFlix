@@ -6,6 +6,7 @@ import Trending from "./trending/Trending";
 import Popular from "./popular/Popular";
 import TopRated from './topRated/TopRated';
 import Latest from './latest/Latest';
+import BackToTopButton from '../../components/backToTop/BackToTopButton';
 const Home = () => {
   return (
     <div className="homePage">
@@ -15,6 +16,7 @@ const Home = () => {
             <Popular /> 
             <TopRated/>
             <Latest /> 
+            <BackToTopButton/>
         </div>
   );
 };

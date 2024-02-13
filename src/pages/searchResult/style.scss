@@ -27,3 +27,22 @@
         }
     }
 }
+
+.noResultsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .noResultsImage {
+    width: 300px; /* Adjust the width as needed */
+  }
+  
+  .resultNotFound {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #555;
+    text-align: center;
+  }
